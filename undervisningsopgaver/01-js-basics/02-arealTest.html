@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        let længde = 10;
+        let bredde = 11;
+        let areal = bredde * længde;
+        let resultat = `Bredden er ${bredde} meter, længden er ${længde} meter og arealet er ${areal} kvadratmeter`;
+        console.log(resultat);
+
+        if (areal < 100) {
+            console.log("Arealet er for lille");
+        } else if (areal > 100 && areal < 200) {
+            console.log("Arealet er ok");
+        } else if (areal >= 200) {
+            console.log("Arealet er for stort");
+        }
+    </script>
+</body></html>
