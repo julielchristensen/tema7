@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <article id="om_dyr">
+        <p></p>
+    </article>
+
+    <script>
+        const dyr = [{
+                "navn": "Gris",
+                "type": "pattedyr",
+                "levested": "fra svinefarme",
+                "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+            },
+            {
+                "navn": "Frø",
+                "type": "amfibie",
+                "levested": "fra sumpen",
+                "billede": "http://mabe-kea.dk/E19/pics/frog.png"
+            },
+            {
+                "navn": "Ræv",
+                "type": "pattedyr",
+                "levested": "fra skoven",
+                "billede": "http://mabe-kea.dk/E19/pics/fox.png"
+            },
+            {
+                "navn": "Sild",
+                "type": "fisk",
+                "levested": "fra havet",
+                "billede": "http://mabe-kea.dk/E19/pics/sild.png"
+            },
+            {
+                "navn": "Krokodille",
+                "type": "krybdyr",
+                "levested": "fra floder",
+                "billede": "http://mabe-kea.dk/E19/pics/kroko.png"
+            }
+        ];
+
+        console.log(dyr);
+
+        document.addEventListener("DOMContentLoaded", visDyr);
+
+        function visDyr() {
+            console.log("dom er loadet");
+            const listevisning = document.querySelector("#om_dyr");
+            dyr.forEach(dyr => {
+                listevisning.innerHTML += `<p>${dyr.navn}, ${dyr.type} ${dyr.levested}</p>`
+            })
+            //
+            //                    article.querySelector("p").textContent = (`Dyr:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
+            //                    article.querySelector("img").src = dyr.billede;
+        }
+    </script>
+</body></html>
